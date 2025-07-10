@@ -1,6 +1,9 @@
 
+function descrevendoLetra(){
+
+}
+
 function escrevendoLetra() {
-    
     function ativaLetra(elemento) {
         const arrtexto = elemento.innerHTML.split('');
         elemento.innerHTML = '';
@@ -10,11 +13,10 @@ function escrevendoLetra() {
             }, 75 * i);
         });
     }
-
-
     const titulo = document.querySelector('.digitando');
     ativaLetra(titulo);
 }
+escrevendoLetra()
 
 const ativaMenu = document.querySelector('.fa-bars');
 const navMenu = document.querySelector('header .navegacao-primaria');
