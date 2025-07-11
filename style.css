@@ -17,18 +17,32 @@ body {
 }
 
 header {
-    background-color: #000;
+    background-color: #111;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
     padding: 10px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content:space-evenly;
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.3);
+    
+    
 }
+
 
 header h1 {
-    color: #dc3545;
+    color: #2600ff;
     font-size: 2.5rem;
+    border-color: #2600ff;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   align-items: center;
+    
 
 }
+
 
 header span {
     color: #fff;
@@ -42,10 +56,20 @@ header .navegacao-primaria {
 }
 
 header .navegacao-primaria li a {
+    align-items: center;
     color: #fff;
     width: 0px;
     height: 0px;
     font-size: 1.3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+header .navegacao-primaria li a:hover{
+    color: #2600ff;
+    border-bottom: 0.1rem #2600ff;
+    font-size: 2rem;
+    
 }
 
 header .navegacao-primaria li a::after {
@@ -62,7 +86,7 @@ header .navegacao-primaria li a:hover::after {
     width: 100%;
     height: 0px;
     padding: 0px;
-    border-bottom: 4px solid #dc3545;
+    border-bottom: 4px solid #2600ff;
 }
 
 
@@ -170,7 +194,7 @@ main .sobre {
 
 .sobre_titulo h1 {
     font-size: 2.5rem;
-    color: #ff5d56;
+    color: #5e41ff;
     margin-bottom: 15px;
     font-family: 'Berkshire swash', cursive;
 }
@@ -193,7 +217,7 @@ main .sobre {
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    background-color: #dc3545;
+    background-color: #17067c;
 }
 
 .sobre img {
@@ -226,15 +250,15 @@ main .sobre {
     grid-template-columns: 1fr 1fr;
 }
 
-.sobre_texto h1{
+.sobre_texto h1 {
     font-size: 2.3rem;
     color: #fff;
     grid-column: 1/-1;
 
 }
 
-.sobre_texto h1::after{
-    background-color: #ff5d56;
+.sobre_texto h1::after {
+    background-color: #5436ff;
     height: 6px;
     width: 60px;
     margin: 20px 0;
@@ -243,14 +267,14 @@ main .sobre {
     border-radius: 5px;
 }
 
-.sobre_texto p{
+.sobre_texto p {
     font-size: 1.3rem;
     grid-row: 2;
     grid-column: 1/-1;
 
 }
 
-.sobre_info{
+.sobre_info {
     margin-top: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -259,66 +283,70 @@ main .sobre {
     align-items: center;
 }
 
-.sobre_info i{
-    color: #dc3545; 
+.sobre_info i {
+    color: #2600ff;
     display: inline-block;
     padding-right: 1.5rem;
 }
 
-.sobre_info p{
+.sobre_info p {
     font-size: .9rem;
 
 }
 
-@keyframes sobeSecao{
-    from{
+@keyframes sobeSecao {
+    from {
         transition: .5s;
         transform: translate3d(60px, 0, 0);
     }
-    to{
+
+    to {
         transform: translate3d(0, 0, 0);
     }
 }
 
-@keyframes ladoSecao{
-    from{
+@keyframes ladoSecao {
+    from {
         transition: .5s;
         transform: translate3d(-60px, 0, 0);
     }
-    to{
+
+    to {
         transform: translate3d(0, 0, 0);
     }
 }
 
 /*responsivo*/
 
-@media(max-width: 992px){
-    .section-div img{
+@media(max-width: 992px) {
+    .section-div img {
         display: none;
 
     }
-    .section-div{
+
+    .section-div {
         background-image: url(imgs/meufoto-removebg-preview.png);
         background-repeat: no-repeat;
         background-size: cover;
     }
-    header .navegacao-primaria{
+
+    header .navegacao-primaria {
         display: none;
 
     }
 
-    header{
+    header {
         justify-content: space-between;
         padding: 30px 70px;
     }
 
-    header i{
+    header i {
         color: #f7f7f7;
         font-size: 3rem;
     }
 
-    header .navegacao-primaria.ativado{
-        background: linear-gradient(rgba(43,42,42, 0.176), rgba(46,46,46, 0.724));
+    header .navegacao-primaria.ativado {
+        background: linear-gradient(rgba(43, 42, 42, 0.176), rgba(46, 46, 46, 0.724));
         position: absolute;
         display: grid;
         top: 80px;
@@ -336,13 +364,14 @@ main .sobre {
 }
 
 
-@media(max-width: 992px){
-    .sobre img{
+@media(max-width: 992px) {
+    .sobre img {
         grid-column: 1/-1;
         justify-self: center;
 
     }
-    .sobre_conteudo{
+
+    .sobre_conteudo {
         grid-column: 1/-1;
     }
 
@@ -350,19 +379,19 @@ main .sobre {
 
 /* Seção Services */
 
-.services{
+.services {
     margin-top: -30px;
     padding: 60px;
     background-color: #151515;
 
 }
 
-.my_services{
+.my_services {
     padding: 60px;
     color: white;
 }
 
-.my_services ul{
+.my_services ul {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -370,9 +399,9 @@ main .sobre {
     justify-content: center;
 }
 
-.my_services ul li{
+.my_services ul li {
     cursor: pointer;
-    border-radius: 6px;
+    border-radius: 90px;
     position: relative;
     padding: 10px;
     display: grid;
@@ -385,28 +414,28 @@ main .sobre {
 
 }
 
-.my_services ul li i{
+.my_services ul li i {
     font-size: 2.7rem;
-    color: #dc3545;
+    color: #5436ff ;
 
 }
 
-.my_services ul li h3{
+.my_services ul li h3 {
     color: #fff;
     font-size: 1.6rem;
     font-family: 'poppins';
     font-weight: 500;
 }
 
-.my_services ul li p{
+.my_services ul li p {
     color: #707070;
     font-size: 1.1rem;
 }
 
-.my_services li::before{
+.my_services li::before {
     content: '';
-    transition: .5s ease-in-out ;
-    border-radius: 6px;
+    transition: .5s ease-in-out;
+    border-radius: 90px;
     width: 0px;
     height: 0px;
     position: absolute;
@@ -416,10 +445,10 @@ main .sobre {
     border-right: 2px solid transparent;
 }
 
-.my_services li::after{
+.my_services li::after {
     content: '';
-    transition: .5s ease-in-out ;
-    border-radius: 6px;
+    transition: .5s ease-in-out;
+    border-radius: 90px;
     width: 0px;
     height: 0px;
     position: absolute;
@@ -429,112 +458,129 @@ main .sobre {
     border-left: 2px solid transparent;
 }
 
-.my_services li:hover::before{
+.my_services li:hover::before {
     width: 100%;
     height: 100%;
-    border-top: 2px solid red;
-    border-right: 2px solid red;
+    border-top: 2px solid rgb(8, 8, 142);
+    border-right: 2px solid rgb(8, 8, 142);
 }
-.my_services li:hover::after{
+
+.my_services li:hover::after {
     width: 100%;
     height: 100%;
-    border-bottom: 2px solid red;
-    border-left: 2px solid red;
+    border-bottom: 2px solid rgb(8, 8, 142);
+    border-left: 2px solid rgb(9, 9, 142);
 }
 
 /* EXPERIENCIAS */
 
-.my_resume{
+.my_resume {
     color: #fff;
 }
 
-.resume_generico{
+.resume_generico {
     padding: 30px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
     justify-content: center;
     gap: 10px;
     align-items: start;
-
+    grid-template-columns: 1fr 1fr;
 }
 
-.resume_generico h2{
-    font-family: 'poppins';
+.resume_generico h2 {
+    font-family: 'Poppins';
     font-size: 1.5rem;
-    background-color: #ff5d56;
+    background-color: #5436ff;  
     justify-self: start;
     padding: 10px;
-    border-radius: 3px;
+    border-radius: 90px;
 
 }
 
-.resume_generico h2 i{
+.resume_generico h2 i {
+    justify-items: start;
     margin-right: 10px;
+    margin-left: 10px;
 
 }
-.experience{
+
+.experience {
     margin-bottom: 30px;
     grid-column: 1;
     grid-row: 1;
 }
 
-.education{
+.education {
     margin-bottom: 30px;
     grid-column: 2;
     grid-row: 1;
 }
 
-.experience_content ul{
-    color: #ff5d56;
+.experience_content ul {
+    color: #17067c;
     gap: 10px;
-    display: flex;
     cursor: pointer;
     margin-top: 20px;
+    display: flex;
     justify-content: center;
 }
 
-.resume_generico .experience_content div{
+.resume_generico .experience_content div {
+    animation: ladoSecao .5s ease-in-out forwards;
+    display: none;
     background-color: #222;
     padding: 40px;
-    position: relative;
 }
 
-.resume_generico .experience_content div::before{
+.resume_generico .experience_content div.ativo {
+    display: block;
+}
+
+.resume_generico .experience_content div::before {
     content: '';
+    display: inline-block;
     border-right: 30px solid transparent;
     border-bottom: 30px solid #222;
     position: absolute;
     top: -20px;
     left: 30px;
-    display: inline-block;
+    position: absolute;
+    
 }
 
-.resume_generico .experience_content div span{
+.resume_generico .experience_content div span {
     color: #dc3545;
-    font-family: 'poppins';
+    font-family: 'Poppins';
     font-weight: bold;
 
 }
 
-.resume_generico .experience_content div h3{
+.resume_generico .experience_content div h3 {
     font-family: 'Poppins';
-    margin: 10px;    
+    margin: 10px;
 }
 
-.resume_generico .experience_content div p{
+.resume_generico .experience_content div p {
     color: #707070;
     font-size: 1.1rem;
+}
+
+.experience_content ul li.ativo {
+    color: #3e3d3d;
 }
 
 /* MEUS DIPLOMAS E CURSOS */
 
-.resume_generico .education_content div{
+.resume_generico .education_content div {
     background-color: #222;
     padding: 40px;
+    display: none;
+    animation: ladoSecao .5s ease-in-out forwards;
     position: relative;
 }
-.education_content ul{
-    color: #ff5d56;
+
+.education_content ul {
+    color: #17067c;
     gap: 10px;
     display: flex;
     cursor: pointer;
@@ -542,7 +588,7 @@ main .sobre {
     justify-content: center;
 }
 
-.resume_generico .education_content div::before{
+.resume_generico .education_content div::before {
     content: '';
     border-right: 30px solid transparent;
     border-bottom: 30px solid #222;
@@ -552,23 +598,27 @@ main .sobre {
     display: inline-block;
 }
 
-.resume_generico .education_content div span{
+.resume_generico .education_content div span {
     color: #dc3545;
     font-family: 'poppins';
     font-weight: bold;
 
 }
 
-.resume_generico .education_content div h3{
+.resume_generico .education_content div h3 {
     font-family: 'Poppins';
-    margin: 10px;    
+    margin: 10px;
 }
 
-.resume_generico .education_content div p{
+.resume_generico .education_content div p {
     color: #707070;
     font-size: 1.1rem;
 }
 
+.education_content ul li.ativo {
+    color: #3e3d3d;
+}
 
-
-
+.resume_generico .education_content div.ativo {
+    display: block;
+}
