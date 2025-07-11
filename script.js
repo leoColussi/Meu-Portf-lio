@@ -26,7 +26,7 @@ function menuMobol() {
     })
 }
 
-menuMobol();
+menuMobol()
 
 
 
@@ -72,7 +72,7 @@ function sobreMim() {
 
     liEducation.forEach((event, index) => {
         event.addEventListener('click', () => {
-            slideShow(index)
+            slideShow2(index)
         })
     });
 

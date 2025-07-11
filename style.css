@@ -12,13 +12,13 @@
 
 body {
     background-color: #000;
-    max-width: 1200px;
+    max-width: 2000px;
     margin: 0 auto;
 }
 
 header {
     background-color: #111;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
@@ -26,20 +26,18 @@ header {
     padding: 10px;
     display: flex;
     align-items: center;
-    justify-content:space-evenly;
-    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.3);
-    
-    
+    justify-content: space-evenly;
+    border-bottom: 0.4rem solid rgba(255, 255, 255, 0.3);
+
+
 }
 
 
 header h1 {
-    color: #2600ff;
+    color: #FF4500;
     font-size: 2.5rem;
-    border-color: #2600ff;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-   align-items: center;
-    
+    border-color: #FF4500;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
 }
 
@@ -51,25 +49,25 @@ header span {
 
 header .navegacao-primaria {
     display: flex;
+    position: relative;
     gap: 30px;
     align-items: center;
 }
 
 header .navegacao-primaria li a {
     align-items: center;
+    justify-content: center;
     color: #fff;
-    width: 0px;
-    height: 0px;
-    font-size: 1.3rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
+    font-size: 1.9rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
 }
 
-header .navegacao-primaria li a:hover{
-    color: #2600ff;
-    border-bottom: 0.1rem #2600ff;
+header .navegacao-primaria li a:hover {
+    color: #525157;
+    border-bottom: 0.1rem #FF4500;
     font-size: 2rem;
-    
+
 }
 
 header .navegacao-primaria li a::after {
@@ -86,7 +84,7 @@ header .navegacao-primaria li a:hover::after {
     width: 100%;
     height: 0px;
     padding: 0px;
-    border-bottom: 4px solid #2600ff;
+    border-bottom: 4px solid #FF4500;
 }
 
 
@@ -112,14 +110,20 @@ header .navegacao-primaria li a:hover::after {
 }
 
 .section-div div h2 {
-    font-family: 'poppins';
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 600;
+    font-size: 300%;
     color: #f7f7f7;
+    margin-top: 100px;
+
 }
 
 .section-div div p {
     font-family: 'poppins';
     font-weight: 200;
+    font-size: 300%;
+
     color: #f7f7f7;
 }
 
@@ -193,10 +197,10 @@ main .sobre {
 }
 
 .sobre_titulo h1 {
-    font-size: 2.5rem;
-    color: #5e41ff;
+    font-size: 4.5rem;
+    color: #ffffff;
     margin-bottom: 15px;
-    font-family: 'Berkshire swash', cursive;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .sobre_titulo p {
@@ -217,7 +221,7 @@ main .sobre {
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    background-color: #17067c;
+    background-color: #29225c;
 }
 
 .sobre img {
@@ -238,7 +242,7 @@ main .sobre {
     animation: sobeSecao .6s ease-in-out forwards;
     grid-column: 2/-1;
     display: grid;
-    color: #707070;
+    color: #525157;
     grid-template-columns: 1fr 1fr;
 
 }
@@ -258,7 +262,7 @@ main .sobre {
 }
 
 .sobre_texto h1::after {
-    background-color: #5436ff;
+    background-color: #525157;
     height: 6px;
     width: 60px;
     margin: 20px 0;
@@ -284,13 +288,13 @@ main .sobre {
 }
 
 .sobre_info i {
-    color: #2600ff;
+    color: #FF4500;
     display: inline-block;
-    padding-right: 1.5rem;
+    padding-right: 1.9rem;
 }
 
 .sobre_info p {
-    font-size: .9rem;
+    font-size: 1.9rem;
 
 }
 
@@ -352,10 +356,10 @@ main .sobre {
         top: 80px;
         color: white;
         z-index: 1;
-        padding: 30px;
+        padding: 0px;
         font-size: 1.6rem;
         font-weight: bold;
-        border-radius: 0 0 4px 4px;
+        border-radius: 0 0 5px 4px;
         right: 20px;
         animation: sobeSecao .8s ease-in-out forwards;
 
@@ -407,16 +411,16 @@ main .sobre {
     display: grid;
     gap: 30px;
     text-align: center;
-    max-width: 300px;
+    max-width: 500px;
     align-content: center;
-    height: 300px;
+    height: 500px;
     background-color: #222;
 
 }
 
 .my_services ul li i {
-    font-size: 2.7rem;
-    color: #5436ff ;
+    font-size: 4.7rem;
+    color: #FF4500;
 
 }
 
@@ -434,7 +438,7 @@ main .sobre {
 
 .my_services li::before {
     content: '';
-    transition: .5s ease-in-out;
+    transition: .4s ease-in-out;
     border-radius: 90px;
     width: 0px;
     height: 0px;
@@ -447,29 +451,29 @@ main .sobre {
 
 .my_services li::after {
     content: '';
-    transition: .5s ease-in-out;
+    transition: .4s ease-in-out;
     border-radius: 90px;
     width: 0px;
     height: 0px;
     position: absolute;
     bottom: -2px;
     left: -2px;
-    border-bottom: 2px solid transparent;
-    border-left: 2px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-left: 3px solid transparent;
 }
 
 .my_services li:hover::before {
     width: 100%;
     height: 100%;
-    border-top: 2px solid rgb(8, 8, 142);
-    border-right: 2px solid rgb(8, 8, 142);
+    border-top: 4px solid rgb(255, 69, 0);
+    border-right: 4px solid rgb(255, 69, 0);
 }
 
 .my_services li:hover::after {
     width: 100%;
     height: 100%;
-    border-bottom: 2px solid rgb(8, 8, 142);
-    border-left: 2px solid rgb(9, 9, 142);
+    border-bottom: 4px solid rgb(255, 69, 0);
+    border-left: 4px solid rgb(255, 69, 0);
 }
 
 /* EXPERIENCIAS */
@@ -488,9 +492,9 @@ main .sobre {
 }
 
 .resume_generico h2 {
-    font-family: 'Poppins';
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.5rem;
-    background-color: #5436ff;  
+    background-color: #525157;
     justify-self: start;
     padding: 10px;
     border-radius: 90px;
@@ -517,7 +521,7 @@ main .sobre {
 }
 
 .experience_content ul {
-    color: #17067c;
+    color: #29225c;
     gap: 10px;
     cursor: pointer;
     margin-top: 20px;
@@ -526,7 +530,7 @@ main .sobre {
 }
 
 .resume_generico .experience_content div {
-    animation: ladoSecao .5s ease-in-out forwards;
+    animation: ladoSecao 1.s ease-in-out forwards;
     display: none;
     background-color: #222;
     padding: 40px;
@@ -545,11 +549,11 @@ main .sobre {
     top: -20px;
     left: 30px;
     position: absolute;
-    
+
 }
 
 .resume_generico .experience_content div span {
-    color: #dc3545;
+    color: #FF4500;
     font-family: 'Poppins';
     font-weight: bold;
 
@@ -575,7 +579,7 @@ main .sobre {
     background-color: #222;
     padding: 40px;
     display: none;
-    animation: ladoSecao .5s ease-in-out forwards;
+    animation: ladoSecao 1.2s ease-in-out forwards;
     position: relative;
 }
 
@@ -599,7 +603,7 @@ main .sobre {
 }
 
 .resume_generico .education_content div span {
-    color: #dc3545;
+    color: #FF4500;
     font-family: 'poppins';
     font-weight: bold;
 
